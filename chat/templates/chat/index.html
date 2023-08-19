@@ -1,0 +1,36 @@
+{% extends "chat/search.html" %}
+{% load static %}
+
+
+
+
+{% block body %}
+
+<div id = "contacts-section"> 
+
+    
+    {% for contact in contacts %}
+    {% if contact.first_person.username == user.get_username %}
+    <p class = "contact-list "><i class="fas fa-user"></i>   <a href = "{% url 'chatroom'  contact.id %}">   {{contact.second_person}}</a></p>
+    {% else %}
+    <p class="contact-list"><i class="fas fa-user"></i> <a href = "{% url 'chatroom' contact.id %}">{{contact.first_person}}</a></p>
+     
+    {% endif %}
+
+    {% endfor %}
+
+
+   
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

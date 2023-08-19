@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Let's Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'chat/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'chat/favicon.ico' %}" type="image/x-icon">
+        <link href = "{% static 'chat/styles.css' %}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+
+
+    <body>
+        <header class="header">
+
+            <nav class="navbar">
+
+                <a id = "nav-brand">
+                    Let's Chat <i class="fas fa-comment"></i>
+                </a>
+   
+
+            <ul class="nav-menu">
+                {% if request.user.is_authenticated %}
+
+                <li class = "nav-item">
+                    <a  href = "{% url 'index' %}" class="nav-link">All Chats</a>
+    
+                </li>
+               
+               
+                <li class = "nav-item" id="logout">
+                    <a href = "{% url 'logout_view'%}" class="nav-link" >Logout</a>
+                </li>
+
+
+               <li class = "nav-item">
+                    <a href = "#" class="nav-link" id = "avatar" >
+                    <i class="fas fa-user"></i> {{user.get_username}}
+                           
+                        </a>
+                </li>
+
+            </ul>
+                {% endif %}
+            <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+            </div>
+
+           
+               
+           
+        </nav>
+    </header>
+
+
+        <div class="body">
+            {% block search %}
+            {% endblock %}
+
+            {% block body %}
+            {% endblock %}
+            
+            
+
+        </div>
+
+       
+        
+        <script src = "{% static 'chat/nav.js' %}"></script>
+
+    </body>
+</html>

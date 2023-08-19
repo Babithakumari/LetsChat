@@ -1,0 +1,421 @@
+body{
+    margin:0;
+    margin-bottom:50px;
+    padding:0;
+    background-image: url('scattered-forcefields.svg');
+    color:#1B2021;
+    font-family: 'Ubuntu', sans-serif;
+    color:grey;
+    
+
+}
+
+
+/*--------------------------------------*/
+ 
+/* general elements*/
+p{
+    margin:0 0;
+}
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin:10px;
+    list-style:none;
+}
+input{
+    background-color:white;
+    outline:none;
+    border:1px solid #C9CCD5;
+    display:inline-block;
+    
+}
+button{
+    border:none;
+}
+
+
+a{
+    text-decoration:none;
+    display:inline-block;
+    color:grey
+}
+a:hover{
+    color:black;
+}
+/* ----------------------------------------------------*/
+
+/*Login/register*/
+.login{
+    background-color:white;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.4);
+    width:30%;
+    color:black;
+    padding:6px;
+    margin:50px auto;
+}
+
+#login-header,#login-details{
+    
+    max-width:100%;
+    margin:auto;
+    align-items:center;
+    text-align:center;
+    line-height:2;
+    
+    
+}
+#login-header-text{
+    font-weight:200;
+    margin:auto;
+    color:#444941;
+
+}
+
+.login-details-div{
+    margin:15px;
+}
+.login-details-div-text{
+    font-weight:200;
+    color:#444941
+}
+.login-details-form-input{
+    padding:1.5em;
+}
+#login-details-form-btn{
+    margin:2em 0;
+    background-color:#00FFFF;
+    color:grey;
+    font-weight:600;
+
+}
+#login-details-form-btn:hover{
+    background-color:#11eeee;
+
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/*error*/
+#error-text{
+    text-align:center;
+    background-color: white;
+    color:red;
+}
+img{
+    background-color: white;
+    height:350px;
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+/* index-page */
+
+/* Component-1 nav */
+
+
+
+
+.navbar 
+{
+    background-color:#00ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+ }
+
+
+#nav-brand{
+    font-weight:500;
+    color:grey;
+    font-size:25px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    color:grey;
+    font-size:18px;
+    font-weight: 400;
+
+}
+.nav-link:hover{
+    color: #482ff7;
+}
+.nav-btn{
+    color:black;
+
+
+}
+
+
+ .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+
+
+/*Component-2 Index */
+#search-section{
+  max-width:100%;
+  padding:10px;
+  margin:0 auto;
+  text-align:center;
+  background-color:grey;
+}
+
+
+ #search-bar{
+    display:inline-block;
+    color:black;
+    border: 1px solid black;
+    border-radius: 10px;
+    width:50%;
+    padding:10px;
+  
+    
+    
+}
+#search-button{
+    display:inline-block;
+    background-color:#00FFFF;
+    border:1px solid black;
+    border-radius:8px;
+    padding:8px;
+    margin-left:4px;
+
+    
+}
+
+
+ 
+.contact-list{
+    background-color:white;
+    color:#1B2021;
+    padding:15px;
+    margin:0;
+    border-bottom:0.5px solid black;
+    
+}
+.contact-list:hover{
+    background-color:#C9CCD5;
+}
+
+/*------------------------------------------------------*/
+
+
+
+/*chatroom */
+
+
+.fa-user{
+    color:grey;
+    padding:6px;
+}
+
+#profile2{
+    background-color:grey;
+    max-width:100%;
+    padding:12px;
+    color:white;
+}
+#avatar2{
+    color:white;
+}
+#chat-room{
+    background-color:white;
+
+    
+}
+#all-msgs{
+    padding:15px;
+    height:332px;
+    overflow-y: scroll;
+}
+.prev-msgs{
+color:grey;
+margin:10px;
+}
+
+.time{
+    font-size:12px;
+    color:#C8C6C6;
+    
+}
+
+.msg-text{
+    margin-left:26px;
+    color:grey;
+    font-family:sans-serif;
+}
+
+#send-section{
+    position: fixed;
+  bottom: 0;
+  width:100%;
+  padding:10px;
+  margin:0 auto;
+  text-align:center;
+  background-color:grey;
+
+   
+}
+
+#message-input{
+    height: 30px;
+    width:50%;
+    padding:10px;
+    margin:5px;
+    border:1px solid black;
+    border-radius:10px;
+    display:inline-block;
+    color:black;
+    text-align:center;  
+}
+
+#send-btn{
+    height:40px;
+    width:50px;
+    padding:8px;
+    margin:5px;
+    border:1px solid black;
+    border-radius:8px;
+    background-color:#00ffff;
+
+    display:inline-block;
+    margin-left:4px;
+
+}
+
+#sent_by{
+    display:inline-block
+}
+
+
+/*mobile responsiveness */
+
+@media only screen and (max-width: 768px) {
+
+    
+    
+    .nav-menu {
+        position:fixed;
+        left:-100%;
+        top:3.8rem;
+        flex-direction: column;
+        width: 90.5%;
+        height:100%;
+        justify-content: unset;
+        border-radius: 6px;
+        text-align: center;
+        transition: 0.3s;
+        background-color:white;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        margin:auto
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .nav-link:hover{
+        color: #482ff7;
+    }
+    
+    .hamburger{
+        display:block;
+        cursor:pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    #index-section{
+        width:100%;
+        margin:0;
+        box-shadow:none;
+    }
+    #search-section
+    {
+        max-width:100%;
+    }
+    
+    #search-bar{
+        width:80%;
+    }
+    
+
+    #chat-room{
+        width:100%;
+        margin:0 auto;
+    }
+    .contact-list{
+        background-color:white;
+          color:black;
+      }
+
+      #send-section{
+          width:100%;
+      }
+      #chat-room{
+          width:100%;
+          box-shadow:none;
+
+      }
+      #all-msgs{
+          max-height: 500px;
+      }
+      #compose-text-section{
+        position: fixed;
+        height: 50px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+      .login{
+          width:100%;
+          box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
+          margin:0 auto;
+          
+
+      }
+      #message-input{
+          width:70%;
+      }
+    }

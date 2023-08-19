@@ -1,0 +1,67 @@
+
+{% extends "chat/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+
+<div id = "chat-room">
+
+    <input type = "hidden" value = {{room_name}} id = room_id>
+
+    <div id = "profile2">
+        <i class="fas fa-user" id="avatar2"></i> 
+        <span>{{other_user}}</span>
+    </div> 
+    
+    
+    <div id = "all-msgs">
+            {% for message in previous_msg %}
+
+            <div class = "prev-msgs"> 
+                <i class="fas fa-user"></i>
+                <b>{{message.user}}</b>
+                <span class="time">{{ message.timestamp.time}}</span>
+                <p class="msg-text">{{message.message}}</p>
+            </div>
+
+           {% endfor %}
+    
+        
+
+            
+    
+       
+    
+    </div>
+    
+    
+        
+</div>
+
+
+
+
+
+<div id="send-section">
+<form id="send_form">
+    
+    <input type="text" placeholder="Type your message here!" id="message-input">
+    <input type="submit" value="Send" id="send-btn">
+    
+    <input type = "hidden"  value ="{{user.get_username}}" id = "sent_by">
+
+</form>
+</div>
+
+
+
+{{room_name | json_script:"json-roomname"}}
+{{ user_name |json_script:"json-username"}}
+
+<script src = "{% static 'chat/script.js' %}"></script>
+
+
+
+
+{% endblock %}

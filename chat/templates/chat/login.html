@@ -1,0 +1,38 @@
+{% extends 'chat/layout.html' %}
+{% block body %}
+{% if message %}
+<h1>{{message}}</h1>
+{% endif %}
+
+<div class = "login">
+
+    <div id="login-header">
+       <h1 id="login-header-text">Log In</h1>
+    </div>
+    
+    <div id = "login-details">
+        <form id="login-details-form" method="POST" action = "{% url 'login_view'%}">
+            {% csrf_token %}
+
+            <div class="login-details-div">
+            <p class="login-details-text">Username</p>
+            <input type="text" name="username" class="login-details-form-input">
+            </div>
+
+            <div class="login-details-div">
+            <p class="login-details-text">Password</p>
+            <input type= "password"  name="password"  class="login-details-form-input">
+            </div>
+            
+            <input type = "submit" value="   Log In   "  class="login-details-form-input" id="login-details-form-btn" >
+            <br>
+            <p>Not Registered? <a href="{% url 'register' %}"><span>Register here</span></a></p>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

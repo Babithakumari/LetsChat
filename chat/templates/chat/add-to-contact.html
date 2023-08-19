@@ -1,0 +1,22 @@
+{% extends "chat/search.html" %}
+
+
+{% block body %}
+<div id = "contacts-section"> 
+
+    
+    
+    {% if first_person == user.get_username %}
+    <p class = "contact-list "><i class="fas fa-user"></i> {{contact.second_person}}</a></p>
+    {% else %}
+    <p class="contact-list"><i class="fas fa-user"></i> {{contact.first_person}}</a></p>
+    <button>Add to contacts</button>
+    
+    {% endif %}
+</div>
+
+
+
+
+
+{% endblock %}
